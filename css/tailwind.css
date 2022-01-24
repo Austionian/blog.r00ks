@@ -66,7 +66,7 @@ header.isSticky .title {
 
 @media (min-width: 1280px) {
   .table-of-contents {
-    padding: 1.5rem 3.5rem;
+    padding: 1.5rem 2.5rem;
     position: fixed;
     top: 300px;
     left: 7.5rem;
