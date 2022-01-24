@@ -33,7 +33,7 @@ input:-webkit-autofill:focus {
 }
 
 header.isSticky {
-  box-shadow: 0 20px 20px -20px #0000002e;
+  box-shadow: 0 0 6px -1px #0000002e;
   transition: .5s;
 }
 
@@ -49,4 +49,33 @@ header.isSticky .title {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+}
+
+.read-more:hover::after {
+  content: " →";
+}
+
+.leftNav {
+  opacity: 0;
+}
+
+.leftNav.isSticky {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+@media (min-width: 1280px) {
+  .table-of-contents {
+    padding: 1.5rem 3.5rem;
+    position: fixed;
+    top: 300px;
+    left: 7.5rem;
+    width: 275px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .table-of-contents {
+    display: none;
+  }
 }

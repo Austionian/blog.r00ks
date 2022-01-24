@@ -26,7 +26,7 @@ export default function PostLayout({ frontMatter, next, prev, children }: Props)
       <article>
         <div>
           <header>
-            <div className="pb-10 space-y-1 text-center border-b border-gray-200 dark:border-gray-700">
+            <div className="pb-10 space-y-1 text-center">
               <dl>
                 <div>
                   <dt className="sr-only">Published on</dt>

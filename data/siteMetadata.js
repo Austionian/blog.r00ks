@@ -1,8 +1,8 @@
 const siteMetadata = {
-  title: 'blog.r00ks',
+  title: 'r00ks/blog',
   author: 'Austin Rooks',
-  headerTitle: 'blog.r00ks',
-  description: 'A blog created with Next.js and Tailwind.css',
+  headerTitle: 'r00ks/blog',
+  description: 'A blog about programming and philosophy. But not the philosophy of programming.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://blog.r00ks.io',
@@ -13,8 +13,6 @@ const siteMetadata = {
   email: 'austin@r00ks.io',
   github: 'https://github.com/austionian',
   twitter: 'https://twitter.com/austin_rooks',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com/in/austinrooks',
   locale: 'en-US',
   analytics: {

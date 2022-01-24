@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
@@ -10,6 +11,7 @@ import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import { ReactNode } from 'react'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
+import LeftNav from '@/components/LeftNav'
 
 const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
@@ -34,6 +36,21 @@ interface Props {
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }: Props) {
   const { slug, fileName, date, title, tags } = frontMatter
+
+  const [ids, setIds] = React.useState<Array<{ id: string; title: string }>>(
+    []
+  );
+
+  React.useEffect(() => {
+    const titles = document.querySelectorAll('h2');
+    const idArrays = Array.prototype.slice
+      .call(titles)
+      .map((title) => ({ id: title.id, title: title.innerText })) as Array<{
+      id: string;
+      title: string;
+    }>;
+    setIds(idArrays);
+  }, []);
 
   return (
     <SectionContainer>
@@ -61,6 +78,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 <PageTitle>{title}</PageTitle>
               </div>
             </div>
+            <LeftNav ids={ids}/>
           </header>
           <div
             className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6"
@@ -84,14 +102,14 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       <dl className="text-sm font-medium leading-5 whitespace-nowrap">
                         <dt className="sr-only">Name</dt>
                         <dd className="text-gray-900 dark:text-gray-100">{author.name}</dd>
-                        <dt className="sr-only">Twitter</dt>
+                        <dt className="sr-only">Github</dt>
                         <dd>
-                          {author.twitter && (
+                          {author.github && (
                             <Link
-                              href={author.twitter}
+                              href={author.github}
                               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                             >
-                              {author.twitter.replace('https://twitter.com/', '@')}
+                              {author.github.replace('https://github.com/', '@')}
                             </Link>
                           )}
                         </dd>
@@ -116,9 +134,9 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <div className="text-sm font-medium leading-5 divide-gray-200 xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2">
                 {tags && (
                   <div className="py-4 xl:py-8">
-                    <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
+                    <h3 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                       Tags
-                    </h2>
+                    </h3>
                     <div className="flex flex-wrap">
                       {tags.map((tag) => (
                         <Tag key={tag} text={tag} />
@@ -130,9 +148,9 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   <div className="flex justify-between py-4 xl:block xl:space-y-8 xl:py-8">
                     {prev && (
                       <div>
-                        <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
+                        <h3 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                           Previous Article
-                        </h2>
+                        </h3>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                           <Link href={`/blog/${prev.slug}`}>{prev.title}</Link>
                         </div>
@@ -140,9 +158,9 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     )}
                     {next && (
                       <div>
-                        <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
+                        <h3 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
                           Next Article
-                        </h2>
+                        </h3>
                         <div className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400">
                           <Link href={`/blog/${next.slug}`}>{next.title}</Link>
                         </div>
