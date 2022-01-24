@@ -27,3 +27,26 @@ input:-webkit-autofill:focus {
 .backdrop {
   backdrop-filter: blur(6px);
 }
+
+.top-n-1 {
+  top: -1px;
+}
+
+header.isSticky {
+  box-shadow: 0 20px 20px -20px #0000002e;
+  transition: .5s;
+}
+
+header.isSticky .title {
+  opacity: 0;
+  transition: .5s;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}

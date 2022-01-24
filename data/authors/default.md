@@ -1,15 +1,15 @@
 ---
-name: Tails Azimuth
-avatar: /static/images/avatar.png
-occupation: Professor of Atmospheric Science
-company: Stanford University
-email: address@yoursite.com
-twitter: https://twitter.com/Twitter
-linkedin: https://www.linkedin.com
-github: https://github.com
+name: Austin Rooks
+avatar: /static/images/avatar.webp
+occupation: Software Engineer
+company:
+email: austin@r00ks.io
+twitter: https://twitter.com/austin_rooks
+linkedin: https://www.linkedin.com/in/austinrooks
+github: https://github.com/austionian
 ---
 
-Tails Azimuth is a professor of atmospheric sciences at the Stanford AI Lab. His research interests includes complexity modelling of tailwinds, headwinds and crosswinds.
+Austin Rooks is a software engineer at Chatholic Charities St. Paul & Minneapolis. He works on internal applications critical to bringing non-profit processes more efficiency.
 
 He leads the clean energy group which develops 3D air pollution-climate models, writes differential equation solvers, and manufactures titanium plated air ballons. In his free time he bakes raspberry pi.
 
