@@ -23,20 +23,18 @@ const LayoutWrapper = ({ children }: Props) => {
 
   const classes = isSticky ? stuckClasses : unstuckClasses
   
+  const options = {
+    threshold: 1.0,
+  }
   // mount 
   useEffect(()=>{
     const cachedRef = ref.current
     const observer = new IntersectionObserver(
       ([e]) => {
         if (e) {
-          setIsSticky(e.intersectionRatio < 1)
+          setIsSticky(e.intersectionRatio < options.threshold);
         }
-      },
-      {
-        threshold: [1.0],
-        // rootMargin: '-1px 0px 0px 0px',  // alternativly, use this and set `top:0` in the CSS
-      }
-    )
+      }, options)
     
     observer.observe(cachedRef)
     
