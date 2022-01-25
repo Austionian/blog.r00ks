@@ -11,15 +11,21 @@ import ThemeSwitch from './ThemeSwitch'
 import { ReactNode } from 'react'
 
 interface Props {
+  position: string
   children: ReactNode
 }
 
-const LayoutWrapper = ({ children }: Props) => {
+const LayoutWrapper = ({ position, children }: Props) => {
   const [isSticky, setIsSticky] = useState(false)
   const ref = useRef()
 
   const stuckClasses = "flex items-center justify-between py-2 sticky top-n-1 z-50 transition-all backdrop isSticky px-4 mx-auto sm:px-6 md:px-[10%]";
   const unstuckClasses = "flex items-center justify-between py-10 sticky top-n-1 z-50 transition-all backdrop px-4 mx-auto sm:px-6 md:px-[10%] mt-2";
+
+  const inlineStyles = {
+    position: "sticky",
+    [position]: -1,
+  }
 
   const classes = isSticky ? stuckClasses : unstuckClasses
   
@@ -46,7 +52,7 @@ const LayoutWrapper = ({ children }: Props) => {
     <SectionContainer>
       <div className="flex flex-col justify-between">
         <div className='full-width'>
-        <header className={classes} ref={ref}>
+        <header style={inlineStyles} className={classes} ref={ref}>
           <div>
             <Link href="/" aria-label="Tailwind CSS Blog">
               <div className="flex items-center justify-between">
