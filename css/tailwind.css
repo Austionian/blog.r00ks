@@ -32,11 +32,6 @@ input:-webkit-autofill:focus {
   top: -1px;
 }
 
-header.isSticky {
-  box-shadow: 0 0 6px -1px #0000002e;
-  transition: .5s;
-}
-
 header.isSticky .title {
   opacity: 0;
   transition: .5s;

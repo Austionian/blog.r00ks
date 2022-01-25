@@ -18,8 +18,8 @@ const LayoutWrapper = ({ children }: Props) => {
   const [isSticky, setIsSticky] = useState(false)
   const ref = useRef()
 
-  const stuckClasses = "flex items-center justify-between py-2 sticky top-n-1 z-50 transition-all backdrop isSticky px-4 mx-auto sm:px-6 md:px-[10%]";
-  const unstuckClasses = "flex items-center justify-between py-10 sticky top-n-1 z-50 transition-all backdrop px-4 mx-auto sm:px-6 md:px-[10%]";
+  const stuckClasses = "flex items-center justify-between py-2 sticky top-n-1 z-50 transition-all backdrop isSticky px-4 mx-auto sm:px-6 md:px-[10%] border-b border-slate-900/10 dark:border-slate-300/10 mb-20";
+  const unstuckClasses = "flex items-center justify-between py-2 sticky top-n-1 z-50 transition-all backdrop px-4 mx-auto sm:px-6 md:px-[10%] border-b border-b-0 border-slate-900/10 dark:border-slate-300/10 mb-20";
 
   const classes = isSticky ? stuckClasses : unstuckClasses
   
@@ -46,7 +46,7 @@ const LayoutWrapper = ({ children }: Props) => {
     <SectionContainer>
       <div className="flex flex-col justify-between">
         <div className='full-width'>
-          <div className='h-1'></div>
+          <div className='h-4'></div>
         <header className={classes} ref={ref}>
           <div>
             <Link href="/" aria-label="Tailwind CSS Blog">
