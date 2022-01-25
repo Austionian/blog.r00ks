@@ -1,5 +1,5 @@
 ---
-title: "Learning Rust"
+title: "Learning Rust: Strings and Immutables"
 date: "2022-01-23"
 tags: ['rust']
 draft: false
