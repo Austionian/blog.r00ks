@@ -18,8 +18,8 @@ const LayoutWrapper = ({ children }: Props) => {
   const [isSticky, setIsSticky] = useState(false)
   const ref = useRef()
 
-  const stuckClasses = "flex items-center justify-between py-2 sticky top-n-1 z-50 transition-all backdrop isSticky px-4 mx-auto sm:px-6 md:px-[10%] border-b border-slate-900/10 dark:border-slate-300/10 mb-20";
-  const unstuckClasses = "flex items-center justify-between py-2 sticky top-n-1 z-50 transition-all backdrop px-4 mx-auto sm:px-6 md:px-[10%] border-b border-b-0 border-slate-900/10 dark:border-slate-300/10 mb-20";
+  const stuckClasses = "flex items-center justify-between py-2 sticky top-n-1 z-50 transition-all backdrop isSticky px-4 mx-auto sm:px-6 md:px-[10%] border-b border-slate-900/10 dark:border-slate-300/10 mb-16";
+  const unstuckClasses = "flex items-center justify-between py-8 sticky top-n-1 z-50 transition-all backdrop px-4 mx-auto sm:px-6 md:px-[10%] border-b border-b-0 border-slate-900/10 dark:border-slate-300/10 mb-16";
 
   const classes = isSticky ? stuckClasses : unstuckClasses
   
@@ -27,7 +27,11 @@ const LayoutWrapper = ({ children }: Props) => {
   useEffect(()=>{
     const cachedRef = ref.current
     const observer = new IntersectionObserver(
-      ([e]) => setIsSticky(e.intersectionRatio < 1),
+      ([e]) => {
+        if (e) {
+          setIsSticky(e.intersectionRatio < 1)
+        }
+      },
       {
         threshold: [1.0],
         // rootMargin: '-1px 0px 0px 0px',  // alternativly, use this and set `top:0` in the CSS
