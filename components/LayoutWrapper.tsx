@@ -41,7 +41,7 @@ const LayoutWrapper = ({ children }: Props) => {
     <SectionContainer>
       <div className="flex flex-col justify-between">
         <div className='full-width'>
-        <header className={(isSticky ? "flex items-center justify-between py-2 sticky top-n-1 z-50 transition-all backdrop isSticky px-4 mx-auto sm:px-6 md:px-[10%]" : "flex items-center justify-between py-10 sticky top-n-1 z-50 transition-all backdrop px-4 mx-auto sm:px-6 md:px-[10%]")} ref={ref}>
+        <header className={(isSticky ? "flex items-center justify-between py-2 sticky top-n-1 z-50 transition-all backdrop isSticky px-4 mx-auto sm:px-6 md:px-[10%] mt-2" : "flex items-center justify-between py-10 sticky top-n-1 z-50 transition-all backdrop px-4 mx-auto sm:px-6 md:px-[10%] mt-2")} ref={ref}>
           <div>
             <Link href="/" aria-label="Tailwind CSS Blog">
               <div className="flex items-center justify-between">

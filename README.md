@@ -1,6 +1,6 @@
 # Austin's Blog [https://blog.r00ks.io](https://blog.r00ks.io)
 
-Based on the excellent [Tailwind Nextjs Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)
+Forked from the excellent [Tailwind Nextjs Starter Blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)
 
 ## Stack
 
