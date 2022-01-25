@@ -18,8 +18,8 @@ const LayoutWrapper = ({ children }: Props) => {
   const [stuck, setStuck] = useState(false)
   const ref = useRef()
 
-  const stuckClasses = "flex items-center justify-between py-2 sticky top-n-1 z-50 transition-all backdrop isSticky px-4 mx-auto sm:px-6 md:px-[10%] border-b border-slate-900/10 dark:border-slate-300/10 mb-16";
-  const unstuckClasses = "flex items-center justify-between py-8 sticky top-n-1 z-50 transition-all backdrop px-4 mx-auto sm:px-6 md:px-[10%] border-b border-b-0 border-slate-900/10 dark:border-slate-300/10 mb-16";
+  const stuckClasses = "flex items-center justify-between py-2 sticky top-n-1 z-50 transition-all backdrop isSticky px-4 mx-auto sm:px-6 md:px-[10%] border-b border-slate-900/10 dark:border-slate-300/10 mb-16 w-full";
+  const unstuckClasses = "flex items-center justify-between py-8 sticky top-n-1 z-50 transition-all backdrop px-4 mx-auto sm:px-6 md:px-[10%] border-b border-b-0 border-slate-900/10 dark:border-slate-300/10 mb-16 w-full";
 
   const classes = stuck ? stuckClasses : unstuckClasses
 
@@ -37,10 +37,8 @@ const LayoutWrapper = ({ children }: Props) => {
   }, [ref])
 
   return (
-    <SectionContainer>
+    <>
       <div className="flex flex-col justify-between">
-        <div className='full-width'>
-          <div className='h-4'></div>
         <header className={classes} ref={ref}>
           <div>
             <Link href="/" aria-label="Tailwind CSS Blog">
@@ -80,8 +78,7 @@ const LayoutWrapper = ({ children }: Props) => {
         <Footer />
         </SectionContainer>
       </div>
-      </div>
-    </SectionContainer>
+      </>
   )
 }
 
