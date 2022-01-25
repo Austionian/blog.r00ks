@@ -29,7 +29,7 @@ input:-webkit-autofill:focus {
 }
 
 .top-n-1 {
-  top: -1px;
+  top: -5px;
 }
 
 header.isSticky .title {

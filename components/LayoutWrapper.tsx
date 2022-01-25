@@ -26,8 +26,11 @@ const LayoutWrapper = ({ children }: Props) => {
   useEffect(() => {
     const cachedRef = ref.current
     const observer = new IntersectionObserver(
-      ([e]) => setStuck(e.intersectionRatio < 1),
-      { threshold: [1] }
+      ([e]) => {
+        console.log(e.intersectionRatio)
+        setStuck(e.intersectionRatio < 1)
+      },
+      { threshold: [1.0] }
     )
     observer.observe(cachedRef)
     return () => observer.unobserve(cachedRef)
