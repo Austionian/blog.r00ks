@@ -58,6 +58,6 @@ My first step was to make the nav sticky. I've just always liked the feel of a s
 Thank you, [Tim](https://github.com/timlrx)!
 
 ## Jamming forward
-My eyes have been opened to the JAM stack and it's incredible what can be accomplished. Both Next and Gatsby give React developers (which I am not) great frameworks to easily create highly performative webapps. Coupled with the fact that it's easy to host these for free, it's undeniably the direction of the Internet.
+My eyes have been opened to the JAM stack and it's incredible what can be accomplished. Both Next and Gatsby give React developers great frameworks to easily create highly performative webapps. Coupled with the fact that it's easy to host these for free, it's undeniably the direction of the Internet.
 
 I certianly plan to build future frontends with Next.

@@ -79,3 +79,8 @@ header.isSticky .title {
     display: none;
   }
 }
+
+.post-img {
+  max-width: 500px;
+  margin: auto;
+}
