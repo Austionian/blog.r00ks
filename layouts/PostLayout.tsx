@@ -13,12 +13,6 @@ import { PostFrontMatter } from 'types/PostFrontMatter'
 import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
 import LeftNav from '@/components/LeftNav'
 
-const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/main/data/blog/${fileName}`
-const discussUrl = (slug) =>
-  `https://mobile.twitter.com/search?q=${encodeURIComponent(
-    `${siteMetadata.siteUrl}/blog/${slug}`
-  )}`
-
 const postDateTemplate: Intl.DateTimeFormatOptions = {
   weekday: 'long',
   year: 'numeric',
@@ -35,7 +29,7 @@ interface Props {
 }
 
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }: Props) {
-  const { slug, fileName, date, title, tags } = frontMatter
+  const { slug, date, title, tags } = frontMatter
 
   const [ids, setIds] = React.useState<Array<{ id: string; title: string }>>([])
 
@@ -114,18 +108,10 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     </li>
                   ))}
                 </ul>
-                <LeftNav ids={ids} />
               </dd>
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">
               <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{children}</div>
-              <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
-                <Link href={discussUrl(slug)} rel="nofollow">
-                  {'Discuss on Twitter'}
-                </Link>
-                {` • `}
-                <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
-              </div>
               <Comments frontMatter={frontMatter} />
             </div>
             <footer>
@@ -167,13 +153,16 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                   </div>
                 )}
               </div>
-              <div className="pt-4 xl:pt-8">
+              <div className="sticky top-[50px] pt-4 mb-2 xl:pt-8">
                 <Link
                   href="/blog"
                   className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                 >
                   &larr; Back to the blog
                 </Link>
+                <div>
+                  <LeftNav ids={ids} />
+                </div>
               </div>
             </footer>
           </div>

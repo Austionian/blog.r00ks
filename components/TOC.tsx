@@ -21,7 +21,7 @@ const Table_of_Contents = ({ ids }: TableOfContentProps) => {
   )
   if (ids.length > 0) {
     return (
-      <div className="table-of-contents">
+      <div className="mt-8 table-of-contents">
         <ul>
           {ids.map((item, index) => {
             return (

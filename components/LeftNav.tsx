@@ -8,16 +8,20 @@ const LeftNav = ({ ids }) => {
   const ref = useRef()
 
   useEffect(() => {
-    const cachedRef = ref.current
-    const observer = new IntersectionObserver(([e]) => setIsSticky(e.intersectionRatio < 1), {
-      threshold: [1],
-    })
-    observer.observe(cachedRef)
-    // unmount
-    return function () {
-      observer.unobserve(cachedRef)
+    const onScroll = () => {
+      const scrollPx = document.documentElement.scrollTop
+      const winHeightPx =
+        document.documentElement.scrollHeight - document.documentElement.clientHeight
+      const scrolled = scrollPx / winHeightPx
+      if (scrolled > 0.07) {
+        setIsSticky(true)
+      } else {
+        setIsSticky(false)
+      }
     }
-  }, [])
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [isSticky])
 
   return (
     <div className={isSticky ? 'leftNav isSticky' : 'leftNav'} ref={ref}>

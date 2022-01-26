@@ -46,25 +46,13 @@ header.isSticky .title {
   transition: 0.5s;
 }
 
-@media (min-width: 1280px) {
-  .table-of-contents {
-    padding: 1.5rem 2.5rem;
-    position: fixed;
-    top: 300px;
-    left: 7.5rem;
-    width: 275px;
-    display: none;
-  }
-
-  .leftNav.isSticky .table-of-contents {
-    display: block;
-  }
+.table-of-contents {
+  position: sticky;
+  display: none;
 }
 
-@media (max-width: 1279px) {
-  .table-of-contents {
-    display: none;
-  }
+.leftNav.isSticky .table-of-contents {
+  display: block;
 }
 
 .post-img {
