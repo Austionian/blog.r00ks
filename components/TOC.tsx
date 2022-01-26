@@ -1,6 +1,5 @@
 import React from 'react'
 import Link from 'next/link'
-import _ from 'lodash';
 
 import useScrollSpy from '../lib/scollSpy'
 
@@ -25,11 +24,11 @@ const Table_of_Contents = ({ ids }: TableOfContentProps) => {
             (item) => document.querySelector(`#${item.id}`).parentElement.closest('section')!
         ),
         { offset: OFFSET }
-    );
+    )
   
     if (ids.length > 0 ) {
         return (
-            <div className='table-of-contents'>
+            <div className="table-of-contents">
                 <ul>
                     {ids.map((item, index) => {
                         return (
@@ -46,7 +45,7 @@ const Table_of_Contents = ({ ids }: TableOfContentProps) => {
             </div>
         )
     }
-    return null;
+    return <></>
 }
 
 export default Table_of_Contents

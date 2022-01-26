@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
 
 import siteMetadata from '@/data/siteMetadata'
 
@@ -59,7 +59,7 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
           <motion.button
             whileHover={{
               scale: 1.2,
-              transition: { duration: .2 },
+              transition: { duration: 0.2 },
             }}
             whileTap={{ scale: 0.7 }}
             className={`py-2 sm:py-0 w-full bg-primary-500 px-4 rounded-md font-medium text-white disabled:bg-gray-300 disabled:text-gray-900 ${

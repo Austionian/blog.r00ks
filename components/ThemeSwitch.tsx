@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
-import { motion } from "framer-motion"
+import { motion } from 'framer-motion'
 
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false)
@@ -13,7 +13,7 @@ const ThemeSwitch = () => {
     <motion.button
       whileHover={{
         scale: 1.2,
-        transition: { duration: .2 },
+        transition: { duration: 0.2 },
       }}
       whileTap={{ scale: 0.7 }}
       aria-label="Toggle Dark Mode"
