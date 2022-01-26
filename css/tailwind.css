@@ -53,6 +53,11 @@ header.isSticky .title {
     top: 300px;
     left: 7.5rem;
     width: 275px;
+    display: none;
+  }
+
+  .leftNav.isSticky .table-of-contents {
+    display: block;
   }
 }
 
