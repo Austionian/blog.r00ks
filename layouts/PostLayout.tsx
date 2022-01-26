@@ -37,20 +37,18 @@ interface Props {
 export default function PostLayout({ frontMatter, authorDetails, next, prev, children }: Props) {
   const { slug, fileName, date, title, tags } = frontMatter
 
-  const [ids, setIds] = React.useState<Array<{ id: string; title: string }>>(
-    []
-  );
+  const [ids, setIds] = React.useState<Array<{ id: string; title: string }>>([])
 
   React.useEffect(() => {
-    const titles = document.querySelectorAll('h2');
+    const titles = document.querySelectorAll('h2')
     const idArrays = Array.prototype.slice
       .call(titles)
       .map((title) => ({ id: title.id, title: title.innerText })) as Array<{
-      id: string;
-      title: string;
-    }>;
-    setIds(idArrays);
-  }, []);
+      id: string
+      title: string
+    }>
+    setIds(idArrays)
+  }, [])
 
   return (
     <SectionContainer>
@@ -116,7 +114,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                     </li>
                   ))}
                 </ul>
-                <LeftNav ids={ids}/>
+                <LeftNav ids={ids} />
               </dd>
             </dl>
             <div className="divide-y divide-gray-200 dark:divide-gray-700 xl:pb-0 xl:col-span-3 xl:row-span-2">

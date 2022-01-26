@@ -37,10 +37,6 @@ header.isSticky .title {
   transition: .5s;
 }
 
-.read-more:hover::after {
-  content: " →";
-}
-
 .leftNav {
   opacity: 0;
 }

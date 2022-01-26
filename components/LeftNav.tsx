@@ -9,23 +9,19 @@ const LeftNav = ({ ids }) => {
 
   useEffect(() => {
     const cachedRef = ref.current
-    const observer = new IntersectionObserver(
-      ([e]) => setIsSticky(e.intersectionRatio < 1),
-      {
-        threshold: [1],
-      }
-    )
+    const observer = new IntersectionObserver(([e]) => setIsSticky(e.intersectionRatio < 1), {
+      threshold: [1],
+    })
     observer.observe(cachedRef)
-    
     // unmount
-    return function(){
+    return function () {
       observer.unobserve(cachedRef)
     }
   }, [])
 
   return (
-    <div className={(isSticky ? 'leftNav isSticky' : 'leftNav')} ref={ref}>
-        <Table_of_Contents ids={ids} />
+    <div className={isSticky ? 'leftNav isSticky' : 'leftNav'} ref={ref}>
+      <Table_of_Contents ids={ids} />
     </div>
   )
 }

@@ -64,10 +64,10 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                       <div className="text-base font-medium leading-6">
                         <Link
                           href={`/blog/${slug}`}
-                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400 read-more"
+                          className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                           aria-label={`Read "${title}"`}
                         >
-                          Read more
+                          Read more &rarr;
                         </Link>
                       </div>
                     </div>

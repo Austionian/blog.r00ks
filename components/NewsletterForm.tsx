@@ -62,7 +62,7 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
               transition: { duration: 0.2 },
             }}
             whileTap={{ scale: 0.7 }}
-            className={`py-2 sm:py-0 w-full bg-primary-500 px-4 rounded-md font-medium text-white disabled:bg-gray-300 disabled:text-gray-900 ${
+            className={`py-2 sm:py-0 w-full bg-primary-500 px-4 rounded-md font-medium text-white dark:text-black disabled:bg-gray-300 disabled:text-gray-900 ${
               subscribed ? 'cursor-default' : 'hover:bg-primary-700 dark:hover:bg-primary-400'
             } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600 dark:ring-offset-black`}
             type="submit"
