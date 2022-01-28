@@ -52,6 +52,7 @@ const Giscus = ({ mapping }: Props) => {
 
   useEffect(() => {
     LoadComments()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

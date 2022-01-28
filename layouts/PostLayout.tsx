@@ -160,7 +160,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                 >
                   &larr; Back to the blog
                 </Link>
-                <div>
+                <div className="hidden xl:block">
                   <LeftNav ids={ids} />
                 </div>
               </div>
