@@ -69,6 +69,7 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
+              {frontMatter.readingTime.text}
             </div>
           </header>
           <div

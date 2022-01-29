@@ -38,6 +38,7 @@ export default function PostLayout({ frontMatter, next, prev, children }: Props)
               <div>
                 <PageTitle>{title}</PageTitle>
               </div>
+              {frontMatter.readingTime.text}
             </div>
           </header>
           <div
