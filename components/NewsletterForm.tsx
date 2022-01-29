@@ -58,10 +58,10 @@ const NewsletterForm = ({ title = 'Subscribe to the newsletter' }) => {
         <div className="flex w-full mt-2 rounded-md shadow-sm sm:mt-0 sm:ml-3">
           <motion.button
             whileHover={{
-              scale: 1.2,
+              scale: 1.1,
               transition: { duration: 0.2 },
             }}
-            whileTap={{ scale: 0.7 }}
+            whileTap={{ scale: 0.8 }}
             className={`py-2 sm:py-0 w-full bg-primary-500 px-4 rounded-md font-medium text-white dark:text-black disabled:bg-gray-300 disabled:text-gray-900 ${
               subscribed ? 'cursor-default' : 'hover:bg-primary-700 dark:hover:bg-primary-400'
             } focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600 dark:ring-offset-black`}

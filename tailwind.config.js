@@ -20,6 +20,7 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
+        // @ts-ignore
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
       colors: {
