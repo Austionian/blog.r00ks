@@ -15,7 +15,7 @@
     "@agentofuser/rehype-section": "^1.0.5",
     "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/typography": "^0.5.1",
-    "@typescript-eslint/eslint-plugin": "^5.10.1",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
     "autoprefixer": "^10.4.0",
     "esbuild": "^0.13.13",
     "framer-motion": "^6.2.3",
