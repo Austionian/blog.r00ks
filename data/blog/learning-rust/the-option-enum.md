@@ -141,7 +141,7 @@ This got me thinking, in every programming language I've ever written I've encou
 
 Rust doesn't have a null value. The Option enum looks like this:
 ```rust
-pub enum Option {
+pub enum Option<T> {
     Some(T),
     None
 }
