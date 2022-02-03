@@ -11,7 +11,7 @@ const ThemeSwitch = () => {
     if (theme === 'dark') {
       document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0e172a')
     } else {
-      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
     }
     return setMounted(true)
   }, [theme])
