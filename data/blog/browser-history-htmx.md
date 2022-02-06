@@ -49,7 +49,7 @@ That fixes the use case for someone navigating within the app itself, but not if
 
 ## Htmx's Meta Header
 
-Every request that comes from an htmx get or post (i.e. ```hx-get```) has a ```HTTP_HX_REQUEST``` value in the request. That gives a way into the figuring out what template I should be serving for every request. If it's htmx requesting, the fragment is all that's needed. If not we'll need to include the layout, too.
+Every request that comes from htmx (i.e. something like ```hx-get```) has a ```HTTP_HX_REQUEST``` value in the request. That gives a way into the figuring out what template I should be serving for every request. If it's htmx requesting, the fragment is all that's needed. If not we'll need to include the layout, too.
 
 With that in mind I created a helper function that a view could use to determine which template to serve this request. It takes the request and template name, and gives the string to the correct template.
 
