@@ -16,8 +16,8 @@
     "@tailwindcss/forms": "^0.4.0",
     "@tailwindcss/typography": "^0.5.1",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
-    "autoprefixer": "^10.4.0",
-    "esbuild": "^0.14.17",
+    "autoprefixer": "^10.4.2",
+    "esbuild": "^0.14.18",
     "framer-motion": "^6.2.3",
     "github-slugger": "^1.3.0",
     "gray-matter": "^4.0.2",
@@ -45,7 +45,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "12.0.10",
     "@svgr/webpack": "^6.2.1",
-    "@types/react": "^17.0.38",
+    "@types/react": "^17.0.39",
     "@types/tailwindcss": "^3.0.5",
     "cross-env": "^7.0.3",
     "dedent": "^0.7.0",
@@ -56,12 +56,12 @@
     "file-loader": "^6.0.0",
     "globby": "11.0.3",
     "husky": "^7.0.0",
-    "inquirer": "^8.1.1",
+    "inquirer": "^8.2.0",
     "lint-staged": "^12.3.3",
     "next-remote-watch": "^1.0.0",
     "prettier": "2.2.1",
-    "socket.io": "^4.1.3",
-    "socket.io-client": "^4.1.3",
-    "typescript": "^4.3.5"
+    "socket.io": "^4.4.1",
+    "socket.io-client": "^4.4.1",
+    "typescript": "^4.5.5"
   }
 }
