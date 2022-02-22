@@ -43,7 +43,7 @@ input:-webkit-autofill:focus {
 
 header.isSticky .title {
   opacity: 0;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .leftNav {

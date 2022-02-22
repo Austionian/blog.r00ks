@@ -56,6 +56,9 @@ module.exports = {
             'h4,h5,h6': {
               color: theme('colors.gray.900'),
             },
+            p: {
+              fontSize: '18px',
+            },
             pre: {
               backgroundColor: theme('colors.gray.800'),
             },

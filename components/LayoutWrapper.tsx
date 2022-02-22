@@ -39,6 +39,7 @@ const LayoutWrapper = ({ children }: Props) => {
 
   return (
     <>
+      <div className="max-w-xl w-[50%] mr-[15%] mt-8 absolute top-0 right-0 bg-gradient-to-r from-sky-300 to-indigo-300 dark:bg-gradient-to-r dark:from-sky-800 dark:to-indigo-800 opacity-60 blur-3xl h-48"></div>
       <header className={classes} ref={ref}>
         <div className="flex justify-between items-center max-w-3xl px-4 mx-auto sm:px-6 xl:max-w-5xl xl:px-0">
           <div>
@@ -63,7 +64,7 @@ const LayoutWrapper = ({ children }: Props) => {
                 <Link
                   key={link.title}
                   href={link.href}
-                  className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400"
+                  className="p-1 font-bold text-gray-900 sm:p-4 dark:text-gray-100 hover:text-primary-600 dark:hover:text-primary-400"
                 >
                   {link.title}
                 </Link>
