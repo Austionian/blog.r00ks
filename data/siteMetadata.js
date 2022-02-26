@@ -1,7 +1,7 @@
 const siteMetadata = {
-  title: 'r00ks/blog',
+  title: 'r00ks.blog',
   author: 'Austin Rooks',
-  headerTitle: 'r00ks/blog',
+  headerTitle: 'r00ks.blog',
   description: 'A blog about programming and philosophy. But not the philosophy of programming.',
   language: 'en-us',
   theme: 'system', // system, dark or light
