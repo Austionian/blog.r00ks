@@ -43,13 +43,13 @@ const LayoutWrapper = ({ children }: Props) => {
       <header className={classes} ref={ref}>
         <div className="flex justify-between items-center max-w-3xl px-4 mx-auto sm:px-6 xl:max-w-5xl xl:px-0">
           <div>
-            <Link href="/" aria-label="Tailwind CSS Blog">
+            <Link href="/" aria-label="rooks blog">
               <div className="flex items-center justify-between">
                 <div className="mr-3">
                   <Logo />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block title">
+                  <div className="hidden text-2xl font-semibold sm:block title mono-type hover:text-primary-600 dark:hover:text-primary-400">
                     {siteMetadata.headerTitle}
                   </div>
                 ) : (

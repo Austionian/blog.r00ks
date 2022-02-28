@@ -22,8 +22,8 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
       <div>
         <div className="pt-24 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Latest
+          <h1 className="mono-type text-2xl leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            LATEST
           </h1>
         </div>
         <ul className="">

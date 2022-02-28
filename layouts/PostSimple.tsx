@@ -27,7 +27,7 @@ export default function PostLayout({ frontMatter, next, prev, children }: Props)
         <div>
           <header>
             <div className="pb-10 space-y-1 text-center">
-              <div>
+              <div className="mono-type">
                 <PageTitle>{title}</PageTitle>
               </div>
               <dl>

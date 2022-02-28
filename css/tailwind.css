@@ -72,3 +72,7 @@ header.isSticky .title {
 ::selection {
   background-color: rgba(56, 189, 248, 0.2);
 }
+
+.mono-type {
+  font-family: 'Major Mono Display', monospace;
+}
