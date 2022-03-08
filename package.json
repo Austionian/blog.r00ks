@@ -46,7 +46,7 @@
     "@next/bundle-analyzer": "12.1.0",
     "@svgr/webpack": "^6.2.1",
     "@types/react": "^17.0.39",
-    "@types/tailwindcss": "^3.0.8",
+    "@types/tailwindcss": "^3.0.9",
     "cross-env": "^7.0.3",
     "dedent": "^0.7.0",
     "eslint": "^8.10.0",
