@@ -57,7 +57,7 @@
     "globby": "11.0.3",
     "husky": "^8.0.1",
     "inquirer": "^8.2.4",
-    "lint-staged": "^12.4.2",
+    "lint-staged": "^13.0.0",
     "next-remote-watch": "^1.0.0",
     "prettier": "2.2.1",
     "socket.io": "^4.5.1",
