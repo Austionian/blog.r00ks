@@ -39,7 +39,6 @@ const LayoutWrapper = ({ children }: Props) => {
 
   return (
     <>
-      {/* <div className="max-w-xl w-[50%] mr-[15%] mt-8 absolute top-0 right-0 bg-gradient-to-r from-sky-400 to-indigo-400 dark:bg-gradient-to-r dark:from-sky-900 dark:to-indigo-900 opacity-60 blur-3xl h-24"></div> */}
       <header className={classes} ref={ref}>
         <div className="flex justify-between items-center max-w-3xl px-4 mx-auto sm:px-6 xl:max-w-5xl xl:px-0">
           <div>
@@ -79,7 +78,6 @@ const LayoutWrapper = ({ children }: Props) => {
         <main className="mb-auto">{children}</main>
         <Footer />
       </SectionContainer>
-      {/* <div className=" w-[100%] mt-8 bottom-0 right-0 bg-gradient-to-r from-sky-400 to-indigo-400 dark:bg-gradient-to-r dark:from-sky-900 dark:to-indigo-900 opacity-60 blur-3xl h-12"></div> */}
     </>
   )
 }
