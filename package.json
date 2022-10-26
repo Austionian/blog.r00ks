@@ -45,7 +45,7 @@
   "devDependencies": {
     "@next/bundle-analyzer": "^12.1.5",
     "@svgr/webpack": "^6.5.0",
-    "@types/react": "^18.0.21",
+    "@types/react": "^18.0.23",
     "@types/tailwindcss": "^3.0.11",
     "cross-env": "^7.0.3",
     "dedent": "^0.7.0",
