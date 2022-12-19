@@ -18,7 +18,7 @@
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "autoprefixer": "^10.4.13",
     "esbuild": "^0.16.9",
-    "framer-motion": "^7.9.1",
+    "framer-motion": "^7.10.2",
     "github-slugger": "^1.3.0",
     "gray-matter": "^4.0.2",
     "image-size": "1.0.2",
