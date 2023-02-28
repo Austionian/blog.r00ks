@@ -76,3 +76,7 @@ header.isSticky .title {
 .mono-type {
   font-family: 'Major Mono Display', monospace;
 }
+
+.giscus-frame {
+    width: 100%;
+}

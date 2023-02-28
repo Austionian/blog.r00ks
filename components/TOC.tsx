@@ -33,7 +33,7 @@ const Table_of_Contents = ({ ids }: TableOfContentProps) => {
                       : 'toc-a hover:font-bold'
                   }
                 >
-                  <li key={item.id} className="py-4">
+                  <li key={item.id} className="py-4 whitespace-nowrap">
                     {item.title}
                   </li>
                 </a>
