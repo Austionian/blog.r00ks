@@ -78,7 +78,7 @@ fn main() -> Result<()> {
 }
 ```
 
-I thought this was a good example (really most advent of codes following this pattern of parsing lines) to try threading on, because for each line in my vec I'm doing a fair bit of work and that work is entirely independent of other lines' work until it comes time to find the actual answer to the problem (which is sorting the scores of all the lines and finding the middle value).
+I thought this was a good example (really most advent of codes follow this pattern of parsing lines) to try threading on, because for each line in my vec I'm doing a fair bit of work and that work is entirely independent of other lines' work until it comes time to find the actual answer to the problem (which is sorting the scores of all the lines and finding the middle value).
 
 ## Lets Add Some Threads
 
@@ -126,9 +126,9 @@ fn part_two(path: &str) -> Result<usize> {
 
 The interesting part here is that instead of functionally iterating through each Line, I'm passing my vec of Lines to the `threading` function, which for each Line creates a thread to calculate the score and adds it to the ultimate vec of scores that is contained in an Arc.
 
-This threading version is obviously harder to read, but is ostensibly more optimized. Or is it?
+This threading version adds some complexity to the solution, but optimizes the code. Or does it?
 
-In this simple example, it's not:
+In this simple example, it doesn't:
 
 <div className="flex flex-wrap -mx-2 overflow-hidden xl:-mx-2">
   <div className="my-1 px-2 w-full overflow-hidden xl:my-1 xl:px-2 xl:w-1/2">
