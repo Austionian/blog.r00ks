@@ -61,7 +61,7 @@
     "next-remote-watch": "^2.0.0",
     "prettier": "2.8.6",
     "socket.io": "^4.6.1",
-    "socket.io-client": "^4.5.4",
+    "socket.io-client": "^4.6.1",
     "typescript": "^4.9.5"
   }
 }
