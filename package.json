@@ -26,7 +26,7 @@
     "next": "^12.1.5",
     "next-themes": "^0.2.1",
     "postcss": "^8.4.23",
-    "preact": "^10.13.2",
+    "preact": "^10.16.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "reading-time": "1.5.0",
